@@ -11,4 +11,22 @@ export default class CommentInput extends React.Component {
     static defaultProps = {
         placeholder = '',
     }
+
+    state = {
+        text = ''
+    }
+
+    handleChangeText = text => {
+        this.setState({text})
+    }
+
+    handleSubmitEditing = () => {
+        const {onSubmit} = this.props
+        const {text} = this.state
+
+        if(!text) return
+
+        onSubmit(text)
+        this.setState(text)
+    }
 }
