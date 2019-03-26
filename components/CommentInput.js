@@ -29,4 +29,22 @@ export default class CommentInput extends React.Component {
         onSubmit(text)
         this.setState(text)
     }
+
+    render(){
+
+        const { placeholder } = this.props
+        const { text } = this.state
+        return (
+            <View style = {styles.container}>
+            <TextInput 
+            style = {styles.input}
+            value = {text}
+            onChangeText = {this.onChangeText}
+            placeholder = {placeholder}
+            underlineColorAndroid = 'transparent'
+            onSubmitEditing = {this.handleSubmitEditing}
+            />
+            </View>
+        )
+    }
 }
