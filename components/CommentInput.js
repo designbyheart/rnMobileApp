@@ -48,3 +48,15 @@ export default class CommentInput extends React.Component {
         )
     }
 }
+
+const styles = StyleSheet.create({
+    container: {
+        borderBottomWidth: StyleSheet.hairlineWidth,
+        borderBottomColor: 'red',
+        paddingHorizontal: 20,
+        height: 60,
+    },
+    input:{
+        flex: 1
+    }
+})
