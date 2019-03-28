@@ -26,7 +26,7 @@ return(
 )
 }
 
-AuthorRow.PropTypes ={
+AuthorRow.propTypes ={
     fullname: PropTypes.string.isRequired,
     linkText: PropTypes.string.isRequired,
     onPressLinkText: PropTypes.func.isRequired

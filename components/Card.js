@@ -14,7 +14,7 @@ handleLoad = () => {
 }
 
 
-    static PropTypes = {
+    static propTypes = {
         fullname: propTypes.string.isRequired,
         image: Image.propTypes.source.isRequired,
         linkText: propTypes.string,

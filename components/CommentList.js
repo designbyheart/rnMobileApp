@@ -3,7 +3,7 @@ import {ScrollView, StyleSheet, Text, View } from 'react-native'
 import PropTypes from 'prop-types'
 
 export default class CommentList extends React.Component {
-    static PropTypes = {
+    static propTypes = {
         items: 
         PropTypes.arrayOf(PropTypes.string).isRequired
     }
@@ -28,6 +28,6 @@ const styles = StyleSheet.create({
         paddingVertical: 20,
         paddingRight: 20,
         borderBottomWidth: StyleSheet.hairlineWidth,
-        borderBottomWidth: 'rgba(0, 0, 0, 0.05)'
+        borderBottomWidth: StyleSheet.hairlineWidth,
     }
 })

@@ -17,7 +17,7 @@ backgroundColor,
     )
 }
 
-Avatar.PropTypes = {
+Avatar.propTypes = {
     initials: PropTypes.string.isRequired,
     size: PropTypes.number.isRequired,
     backgroundColor: ColorPropType.isRequired

@@ -3,12 +3,14 @@ import { StyleSheet, Text, TouchableOpacity, View} from 'react-native'
 import PropTypes from 'prop-types'
 
 export default function NavigationBar({ title, leftText, onPressLeftText}) {
+    return(
 <View style = {styles.container}>
     <TouchableOpacity style = {styles.leftText} onPress = {onPressLeftText}>
     <Text>{leftText}</Text>
     </TouchableOpacity>
     <Text style = {styles.title}>{title}</Text>
 </View>
+    )
 }
 
 NavigationBar.propTypes = {
@@ -19,8 +21,8 @@ NavigationBar.propTypes = {
 
 NavigationBar.defaultProps = {
     title: '',
-    leftText: '',
-    onPressLeftText = () => {}, 
+    leftText: '', 
+    onPressLeftText: () => {},
 }
 
 const styles = StyleSheet.create({

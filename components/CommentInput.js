@@ -3,17 +3,17 @@ import PropTypes from 'prop-types'
 import React from 'react'
 
 export default class CommentInput extends React.Component {
-    static PropTypes = {
+    static propTypes = {
         onSubmit: PropTypes.func.isRequired,
         placeholder: PropTypes.string
     }
 
     static defaultProps = {
-        placeholder = '',
+        placeholder: ' ',
     }
 
     state = {
-        text = ''
+        text: '',
     }
 
     handleChangeText = text => {
@@ -27,7 +27,7 @@ export default class CommentInput extends React.Component {
         if(!text) return
 
         onSubmit(text)
-        this.setState(text)
+        this.setState({text: ''})
     }
 
     render(){
@@ -39,7 +39,7 @@ export default class CommentInput extends React.Component {
             <TextInput 
             style = {styles.input}
             value = {text}
-            onChangeText = {this.onChangeText}
+            onChangeText = {this.handleChangeText}
             placeholder = {placeholder}
             underlineColorAndroid = 'transparent'
             onSubmitEditing = {this.handleSubmitEditing}
@@ -52,7 +52,7 @@ export default class CommentInput extends React.Component {
 const styles = StyleSheet.create({
     container: {
         borderBottomWidth: StyleSheet.hairlineWidth,
-        borderBottomColor: 'red',
+        borderBottomColor: 'black',
         paddingHorizontal: 20,
         height: 60,
     },
